@@ -5,11 +5,11 @@
 }
 
 :root{
-    --color-fondo: #BAC8B1;
     --verde-medio: #9EB590;
     --verde-oscuro: #3E5C2B;
     --verde-muy-oscuro: #1B2A0F;
-
+    
+    --color-fondo: #BAC8B1;
     --color-texto: #29281a;
 }
 
@@ -34,6 +34,37 @@ body {
     perspective: 1000px;
 }
 
+body.modo-oscuro {
+    --color-fondo: #1b291a;
+    --color-texto: #BAC8B1;
+    --verde-medio: #4f7239;
+    --verde-oscuro: #293d18;
+    --verde-muy-oscuro: #0D1A05;
+}
+
+
+/* CSS */
+#claro-oscuro {
+  background-color: var(--verde-medio);
+  border-radius: 8px;
+  border-width: 0;
+  color: var(--color-texto);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
 .inicio{
     display: flex;
@@ -49,8 +80,8 @@ header h1{
     font-style: normal;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 0px;
-    padding: 20px;
-    background-color: #87a176;
+    padding: 40px;
+    background-color: var(--verde-medio);
     width: 100%;
 }
 
@@ -84,10 +115,14 @@ nav li:hover {
     transform: scale(1.05);
 }
 
+a{
+    text-decoration: none;
+    color: var(--color-texto);
+}
 
 /* Targeta */
 
-.sobre-Mi{
+.sobre-mi{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +161,7 @@ nav li:hover {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     max-width: 450px;
-    background: linear-gradient(to bottom left, var(--verde-claro), var(--verde-medio));
+    background: linear-gradient(to bottom left, var(--color-fondo), var(--verde-medio));
     transform-style: preserve-3d;
     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 }
@@ -152,7 +187,7 @@ nav li:hover {
     text-align: center;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: #9EB590;
+    background-color: var(--verde-medio);
 }
 
 .contact-links {
@@ -161,6 +196,7 @@ nav li:hover {
     justify-content: center;
     list-style-type: none;
     padding: 20px;
+    
     
 }
 
