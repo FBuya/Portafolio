@@ -70,6 +70,11 @@ main {
     justify-content: center;
     list-style-type: none;
     padding: 20px;
+    transition: .18s ease;
+}
+
+.contact-links:hover{
+    transform: scale(1.05);
 }
 
 .contact-links li {
