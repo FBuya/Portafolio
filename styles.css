@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color-fondo: #BAC8B1;
+    --verde-medio: #9EB590;
+    --verde-oscuro: #3E5C2B;
+    --verde-muy-oscuro: #1B2A0F;
+
+    --color-texto: #29281a;
+}
+
 html{
     scroll-behavior:smooth;
     scroll-snap-type: y proximity;
@@ -14,14 +23,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #3E5C2B;
+    background: var(--verde-oscuro);
 }
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: #CDDCC3;
-    color: #29281a;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     perspective: 1000px;
 }
 
@@ -30,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     
 }
 
@@ -75,21 +84,16 @@ nav li:hover {
     transform: scale(1.05);
 }
 
-/*main {
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}*/
 
 /* Targeta */
 
-.sobreMi{
+.sobre-Mi{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: #9EB590;
+    background-color: var(--verde-medio);
 
 }
 
@@ -98,7 +102,7 @@ nav li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     
 }
@@ -112,7 +116,7 @@ nav li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #projects .project {
@@ -122,7 +126,7 @@ nav li:hover {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     max-width: 450px;
-    background: linear-gradient(to bottom left, #BAC8B1, #9EB590);
+    background: linear-gradient(to bottom left, var(--verde-claro), var(--verde-medio));
     transform-style: preserve-3d;
     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 }
@@ -146,7 +150,7 @@ nav li:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-color: #9EB590;
 }
