@@ -9,6 +9,7 @@ body {
     margin: 0;
     background-color: #fff6e1ee;
     color: #333;
+    perspective: 1000px;
 }
 
 
@@ -46,18 +47,31 @@ main {
 
 /* Targeta */
 
-
+#projects{
+    padding-top: 10px;
+}
 
 #projects .project {
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 70px;
+    margin-top: 50px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.185);
+    max-width: 350px;
+    background: linear-gradient(#c4c7ff82, #00089f5a) ;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 }
 
+.project:hover{
+    transform: scale(1.02);
+}
 
+#projects h2{
+    margin-top: 30px;
+}
 
 #projects .project h3 {
     margin-bottom: 30px;
@@ -82,6 +96,11 @@ main {
     transform: scale(1.05);
 }
 
+.lista-tecnologias{
+    text-align: left;
+    list-style-type:circle;
+    padding: 0;
+}
 
 
 footer {
