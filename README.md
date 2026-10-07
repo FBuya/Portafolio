@@ -11,3 +11,7 @@ Este camino estará acompañado por los conocimientos adquiridos durante mi carr
 La idea es comenzar desde los fundamentos y avanzar progresivamente en tecnologías como HTML, CSS y JavaScript, para luego comprender cómo se conecta el frontend con el backend, entender conceptos fundamentales como HTTP y REST, y continuar incorporando las herramientas y conocimientos necesarios para convertirme en un desarrollador Full Stack.
 
 Este repositorio será, principalmente, un espacio de aprendizaje, práctica y documentación de mi progreso.
+
+## Página
+
+🔗 Ver sitio: https://fbuya.github.io/Portafolio/
