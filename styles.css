@@ -77,21 +77,25 @@ body.modo-oscuro {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    position: sticky;
     top: 0;
     z-index: 1;
     
 }
 
+
+
 header h1{
-    font-family: "Prompt", sans-serif;
-    font-weight: 800;
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 8rem;
+    font-weight: 100;
+    letter-spacing: 20px;
     font-style: normal;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 0px;
     padding: 40px;
     background-color: var(--verde-medio);
     width: 100%;
+    margin-bottom: 20px;
 }
 
 
@@ -273,6 +277,6 @@ a{
 
 footer {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 50px;
     color: var(--verde-muy-oscuro);
 }
