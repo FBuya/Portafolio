@@ -5,9 +5,9 @@
 }
 
 :root{
-    --verde-medio: #934A49;
-    --verde-oscuro: #934A49;
-    --verde-muy-oscuro: #640C22;
+    --rojo-terracota-medio: #934A49;
+    --rojo-terracota-oscuro: #934A49;
+    --rojo-terracota-muy-oscuro: #640C22;
     
     --color-fondo: #FFFFB3;
     --color-texto: #EED58F;
@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--verde-oscuro);
+    background: var(--rojo-terracota-oscuro);
     
 }
 
@@ -39,19 +39,19 @@ body {
     color: var(--color-texto);
 }
 
-body.modo-oscuro {
+html.modo-oscuro {
     --color-fondo: #241415;
     --color-texto: #EED58F;
 
-    --verde-medio: #74383A;
-    --verde-oscuro: #4F2027;
-    --verde-muy-oscuro: #EED58F;
+    --rojo-terracota-medio: #74383A;
+    --rojo-terracota-oscuro: #4F2027;
+    --rojo-terracota-muy-oscuro: #EED58F;
 }
 
 
 /* CSS */
 #claro-oscuro {
-  background-color: var(--verde-medio);
+  background-color: var(--rojo-terracota-medio);
   border-radius: 8px;
   border-width: 0;
   color: var(--color-texto);
@@ -90,10 +90,11 @@ header h1{
     font-weight: 100;
     letter-spacing: 20px;
     font-style: normal;
+    line-height: 1.3;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 0px;
     padding: 40px;
-    background-color: var(--verde-medio);
+    background-color: var(--rojo-terracota-medio);
     width: 100%;
     margin-bottom: 20px;
 }
@@ -136,7 +137,7 @@ nav li::after {
     width: 0;
     height: 3px;
 
-    background-color: var(--verde-muy-oscuro);
+    background-color: var(--rojo-terracota-muy-oscuro);
 
     transform: translateX(-50%);
     transition: width 0.3s ease;
@@ -149,7 +150,7 @@ nav li:hover::after {
 
 a{
     text-decoration: none;
-    color: var(--verde-muy-oscuro);
+    color: var(--rojo-terracota-muy-oscuro);
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -164,7 +165,7 @@ a{
     align-items: center;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: var(--verde-medio);
+    background-color: var(--rojo-terracota-medio);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -198,7 +199,7 @@ a{
     z-index: 3;
     h2{
         font-size:40px;
-        color: var(--verde-muy-oscuro);
+        color: var(--rojo-terracota-muy-oscuro);
     }
     
 }
@@ -210,14 +211,12 @@ a{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     max-width: 450px;
-    background-color: var(--verde-medio);
+    background-color: var(--rojo-terracota-medio);
     transform-style: preserve-3d;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#projects .project:hover{
-    transform: scale(1.02);
-}
+
 
 #projects h2{
     margin-top: 30px;
@@ -236,7 +235,7 @@ a{
     text-align: center;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: var(--verde-medio);
+    background-color: var(--rojo-terracota-medio);
     position: sticky;
     top: 0;
     z-index: 4;
@@ -252,7 +251,6 @@ a{
 
 .contact-links li {
     margin: 0 10px;
-    transition: .18s ease;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -278,5 +276,5 @@ a{
 footer {
     text-align: center;
     padding-top: 50px;
-    color: var(--verde-muy-oscuro);
+    color: var(--rojo-terracota-muy-oscuro);
 }

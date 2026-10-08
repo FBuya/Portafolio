@@ -1,13 +1,9 @@
 const boton = document.getElementById("claro-oscuro");
 
-// Recuperar modo guardado
-if (localStorage.getItem("modo-oscuro") === "true") {
-    document.body.classList.add("modo-oscuro");
-}
 
 // Actualizar texto del botón según el modo actual
 function actualizarBoton() {
-    if (document.body.classList.contains("modo-oscuro")) {
+    if (document.documentElement.classList.contains("modo-oscuro")) {
         boton.textContent = "☀️ Modo claro";
     } else {
         boton.textContent = "🌙 Modo oscuro";
@@ -19,50 +15,56 @@ actualizarBoton();
 
 // Cambiar modo
 boton.addEventListener("click", () => {
-    document.body.classList.toggle("modo-oscuro");
+    document.documentElement.classList.toggle("modo-oscuro");
 
     localStorage.setItem(
         "modo-oscuro",
-        document.body.classList.contains("modo-oscuro")
+        document.documentElement.classList.contains("modo-oscuro")
     );
 
     actualizarBoton();
 });
 
+const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 
-const card = document.querySelector(".project");
+const cards = document.querySelectorAll(".project");
 
-card.addEventListener("mousemove", (e) => {
+if (!reducirMovimiento) {
+    cards.forEach((card) => {
 
-    const rect = card.getBoundingClientRect();
+        card.addEventListener("mousemove", (e) => {
 
-    // Posición del mouse dentro de la tarjeta
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+            const rect = card.getBoundingClientRect();
 
-    // Centro de la tarjeta
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
+            // Posición del mouse dentro de la tarjeta
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-    // Diferencia respecto al centro
-    const rotateX = (y - centerY) / 10;
-    const rotateY = (centerX - x) / 10;
+            // Centro de la tarjeta
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
 
-    card.style.transform = `
+            // Diferencia respecto al centro
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `
         perspective(1000px)
         rotateX(${rotateX}deg)
         rotateY(${rotateY}deg)
         scale(1.02)
     `;
-});
+        });
 
-card.addEventListener("mouseleave", () => {
+        card.addEventListener("mouseleave", () => {
 
-    card.style.transform = `
+            card.style.transform = `
         perspective(1000px)
         rotateX(0deg)
         rotateY(0deg)
         scale(1)
     `;
-});
+        });
+    });
+}

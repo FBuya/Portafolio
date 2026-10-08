@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Send+Flowers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Varela+Round&display=block" rel="stylesheet">
     
+
+    <script>
+    if (localStorage.getItem("modo-oscuro") === "true") {
+        document.documentElement.classList.add("modo-oscuro");
+    }
+    </script>
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -59,8 +62,8 @@
             <h2>Contacto</h2>
             <p>Puedes contactarme a través de las siguientes plataformas:</p>
             <ul class="contact-links">
-                <li><a href="https://www.linkedin.com/in/francobuyatti/" target="_blank" rel="noopener noreferrer" > LinkedIn</a></li>
-                <li><a href="https://github.com/FBuya" target="_blank" rel="noopener noreferrer"> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/francobuyatti/" aria-hidden="true" target="_blank" rel="noopener noreferrer" > LinkedIn</a></li>
+                <li><a href="https://github.com/FBuya" aria-hidden="true" target="_blank" rel="noopener noreferrer"> GitHub</a></li>
             </ul>
         </section>
     </main>
