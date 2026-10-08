@@ -117,21 +117,39 @@ nav ul {
 }
 
 nav li {
+    position: relative;
     align-items: center;
     padding: 10px;
-    transition: .18s ease;
-    a{
-        color: var(--verde-muy-oscuro);
-    }
 }
 
-nav li:hover {
-    transform: scale(1.05);
+nav li::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+    
+    width: 0;
+    height: 3px;
+
+    background-color: var(--verde-muy-oscuro);
+
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+nav li:hover::after {
+    width: 100%;
 }
 
 a{
     text-decoration: none;
-    color: var(--color-texto);
+    color: var(--verde-muy-oscuro);
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
 }
 
 /* Targeta */
@@ -235,7 +253,10 @@ a{
     font-weight: 400;
     font-style: normal;
     transition: background-position-x 0.9s linear;
+}
 
+.contact-links li a{
+    color: var(--color-texto);
 }
 
 
