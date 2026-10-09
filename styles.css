@@ -56,20 +56,14 @@ html.modo-oscuro {
   border-width: 0;
   color: var(--color-texto);
   cursor: pointer;
-  display: inline-block;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  list-style: none;
-  margin: 0;
   padding: 15px;
-  text-align: center;
   transition: all 200ms;
   vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 
 .inicio{
@@ -255,6 +249,7 @@ a{
     font-weight: 400;
     font-style: normal;
     transition: background-position-x 0.9s linear;
+    padding: 20px;
 }
 
 .contact-links li a{
@@ -277,4 +272,111 @@ footer {
     text-align: center;
     padding-top: 50px;
     color: var(--rojo-terracota-muy-oscuro);
+}
+
+/*------------------------*/
+
+/* ---- CORREO.HTML ---- */
+
+/*------------------------*/
+
+.body-correo{
+    background-color: var(--rojo-terracota-muy-oscuro);
+}
+
+.formulario-contacto{
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.formulario-contacto form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto label{
+    width: 500px;
+    text-align: left;
+    margin: 30px 0 10px;
+    color: var(--rojo-terracota-muy-oscuro);
+    pointer-events: none;
+    font-family: "varela round", cursive;
+    font-size: 1rem;
+    font-weight:600 ;
+    letter-spacing: 8px;
+
+}
+
+
+.formulario-contacto input, .formulario-contacto textarea{
+    background-color: var(--rojo-terracota-medio);
+    border-radius: 15px;
+    color: var(--color-texto);
+    border-style: none;
+    padding: 15px;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    transform: scale(1.1);
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.formulario-contacto input:hover,
+.formulario-contacto textarea:hover {
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+.formulario-contacto textarea{
+    width: 500px;
+    height: 200px;
+    resize: none;
+}
+
+.formulario-contacto input::placeholder, textarea::placeholder{
+    color: var(--color-texto);
+}
+
+.formulario-contacto form button{
+    margin: 30px;
+    background-color: var(--rojo-terracota-oscuro);
+    border-radius:15px;
+    padding-inline: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: var(--color-texto);
+    cursor: pointer;
+    border: none;
+    transition: 0.1s ease-in-out;
+    max-width: 100px;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+.formulario-contacto button:hover{
+    opacity: 0.88;
+    transform: scale(1.04);
+}
+
+.footer-correo{
+    color: var(--color-texto);
 }
