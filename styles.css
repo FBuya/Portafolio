@@ -8,6 +8,7 @@
     --rojo-terracota-medio: #934A49;
     --rojo-terracota-oscuro: #934A49;
     --rojo-terracota-muy-oscuro: #640C22;
+    --rojo-terracota-claro: #EED58F;
     
     --color-fondo: #FFFFB3;
     --color-texto: #EED58F;
@@ -43,6 +44,7 @@ html.modo-oscuro {
     --color-fondo: #241415;
     --color-texto: #EED58F;
 
+    --rojo-terracota-claro: #640C22;
     --rojo-terracota-medio: #74383A;
     --rojo-terracota-oscuro: #4F2027;
     --rojo-terracota-muy-oscuro: #EED58F;
@@ -282,6 +284,12 @@ footer {
 
 .body-correo{
     background-color: var(--rojo-terracota-muy-oscuro);
+    min-height: 100%;
+}
+
+body.body-correo{
+    min-height: 100vh;
+    overflow-x: clip;
 }
 
 .formulario-contacto{
@@ -293,11 +301,19 @@ footer {
     align-items: center;
     justify-content: center;
     z-index: 10;
+    overflow-x: clip;
 }
 
 .formulario-contacto form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .formulario-contacto label{
@@ -378,5 +394,71 @@ footer {
 }
 
 .footer-correo{
-    color: var(--color-texto);
+    color: var(--rojo-terracota-claro);
 }
+
+
+
+/* ==============================
+   ENTRADA CON IMPACTO
+============================== */
+
+@keyframes entradaImpacto {
+    0% {
+        opacity: 0;
+        transform: translateX(110vw);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateX(-18px);
+    }
+
+    78% {
+        transform: translateX(7px);
+    }
+
+    90% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estado inicial y animación */
+.formulario-contacto .campo {
+    opacity: 0;
+    animation: entradaImpacto 0.55s cubic-bezier(.15, .8, .25, 1) both;
+}
+
+/* 1. Nombre */
+.formulario-contacto .campo:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+/* 2. Apellido */
+.formulario-contacto .campo:nth-child(2) {
+    animation-delay: 0.38s;
+}
+
+/* 3. Mensaje */
+.formulario-contacto .campo:nth-child(3) {
+    animation-delay: 0.61s;
+}
+
+.formulario-contacto .campo:nth-child(4) {
+    animation-delay: 0.84s;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .formulario-contacto .campo {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
