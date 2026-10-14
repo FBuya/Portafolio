@@ -187,6 +187,18 @@ a{
 /*  ---------- PROYECTOS ----------*/
 /*---------------------------------*/
 
+.icono-corazon {
+    width: 30px;
+    height: 30px;
+    color: #934A49;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icono-corazon:hover {
+    color: #640C22;
+    transform: scale(1.2);
+}
+
 #projects{
     display: flex;
     flex-direction: column;
