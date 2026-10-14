@@ -50,7 +50,6 @@ html.modo-oscuro {
     --rojo-terracota-muy-oscuro: #EED58F;
 }
 
-
 /* CSS */
 #claro-oscuro {
   background-color: var(--rojo-terracota-medio);
@@ -73,6 +72,7 @@ html.modo-oscuro {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    position: sticky;
     top: 0;
     z-index: 1;
     
@@ -183,6 +183,10 @@ a{
     padding: 20px;
 }
 
+/*---------------------------------*/
+/*  ---------- PROYECTOS ----------*/
+/*---------------------------------*/
+
 #projects{
     display: flex;
     flex-direction: column;
@@ -191,7 +195,6 @@ a{
     min-height: 100vh;
     background-color: var(--color-fondo);
     position: sticky;
-    top: 0;
     z-index: 3;
     h2{
         font-size:40px;
@@ -222,6 +225,12 @@ a{
     margin-bottom: 30px;
     margin-top: 0;
 }
+
+
+/*---------------------------------*/
+/*  ---------- CONTACTO ----------*/
+/*---------------------------------*/
+
 
 #contact{
     display: flex;
