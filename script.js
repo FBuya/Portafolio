@@ -68,3 +68,22 @@ if (!reducirMovimiento) {
         });
     });
 }
+
+
+
+
+const botonesFavoritos = document.querySelectorAll(".btn-favorito");
+
+botonesFavoritos.forEach(boton => {
+    boton.addEventListener("click", () => {
+        boton.classList.toggle("activo");
+
+        const seleccionado = boton.classList.contains("activo");
+
+        boton.setAttribute("aria-pressed", seleccionado);
+        boton.setAttribute(
+            "aria-label",
+            seleccionado ? "Quitar de favoritos" : "Agregar a favoritos"
+        );
+    });
+});

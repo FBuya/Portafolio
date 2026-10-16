@@ -187,15 +187,33 @@ a{
 /*  ---------- PROYECTOS ----------*/
 /*---------------------------------*/
 
+.btn-favorito {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: var(--rojo-terracota-muy-oscuro);
+}
+
 .icono-corazon {
     width: 30px;
     height: 30px;
-    color: #934A49;
-    transition: color 0.3s ease, transform 0.3s ease;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    transition: fill 0.25s ease, transform 0.25s ease;
 }
 
-.icono-corazon:hover {
+.btn-favorito.activo .icono-corazon {
+    fill: currentColor;
+}
+
+.btn-favorito:hover {
     color: #640C22;
+    transform: scale(1.005);
+}
+
+.btn-favorito:hover .icono-corazon {
     transform: scale(1.2);
 }
 
@@ -482,4 +500,3 @@ body.body-correo{
         transform: none;
     }
 }
-
